@@ -14,26 +14,23 @@ import html  # to clean up string
 import random # to shuffle
 import os # To clear screen
 
-def fetch_trivia_questions():
+def fetch_trivia_questions(settings):
     # Getting data from API 
-    url = "https://opentdb.com/api.php?amount=10&category=21"
+    url = f"https://opentdb.com/api.php?amount={settings['amount']}&category={settings['category']+8}"
     response = urllib.request.urlopen(url)
     data = json.load(response)
 
-    # Store all question data as dictionaries in a list
     questions = []
 
-    for i in range(10):
+    for i in range(len(data['results'])):
         question_number = i + 1
         question_text = html.unescape(data['results'][i]['question'])
         correct_answer = html.unescape(data['results'][i]['correct_answer'])
         incorrect_answers = [html.unescape(ans) for ans in data['results'][i]['incorrect_answers']]
 
-        # Combine and shuffle choices
         all_choices = incorrect_answers + [correct_answer]
         random.shuffle(all_choices)
 
-       # Create question dictionary
         questions.append({
             "number": question_number,
             "text": question_text,
@@ -42,6 +39,7 @@ def fetch_trivia_questions():
         })
 
     return questions
+
 
 def createPlayer():
     player_name = ""
@@ -53,7 +51,7 @@ def createPlayer():
    
 def ask_question(player, question):
     os.system('clear')
-    print(f"Player: {player['name']} \t\tScore: {player['score']} out of 10")
+    print(f"Player: {player['name']} \t\tScore: {player['score']} out of {question['number']}")
     print(f"============================================ Question {question['number']} ============================================")
     print(f"{question['text']}")
     answer = 0
@@ -81,6 +79,7 @@ def ask_question(player, question):
                 break
             print("Invalid input. Try again.")
 
+    # Check answer
     if selected_choice == question['correct_answer']:
         print("✅Correct!")
         player['score'] += 1
@@ -118,10 +117,24 @@ def show_game_over(player, questions):
         print(f"Correct Answer: {q['correct_answer']}")
     print("=====================================================")
 
+def options():
+    amount = 0
+    while amount < 1 or amount > 50:
+        amount = int(input("Questions amount (max 50): "))
+
+    cat = 0
+    print("Select a Category:\n1. General Knowledge\t2. Books\t\t3. Film\t\t\t4. Music\t\t5. Musical & Theatres")
+    print("6. Television\t\t7. Video Games\t\t8. Board Games\t\t9. Nature\t\t10. Computers")
+    print("11. Math\t\t12. Mythology\t\t13. Sports\t\t14. Geography\t\t15. History")
+    print("16. Politics\t\t17. Art\t\t\t18. Celebrities\t\t19. Animals\t\t20. Vehicles")
+    while cat < 1 or cat > 20:
+        cat = int(input("Enter a number for Category: "))
+    return {"amount":amount, "category":cat}
 
 def main(): 
     player = createPlayer()
-    questions = fetch_trivia_questions()
+    settings = options()
+    questions = fetch_trivia_questions(settings)
     for question in questions:
         ask_question(player, question)
     show_game_over(player, questions)
