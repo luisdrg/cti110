@@ -26,7 +26,9 @@ def fetch_trivia_questions(settings):
         question_number = i + 1
         question_text = html.unescape(data['results'][i]['question'])
         correct_answer = html.unescape(data['results'][i]['correct_answer'])
-        incorrect_answers = [html.unescape(ans) for ans in data['results'][i]['incorrect_answers']]
+        incorrect_answers = []
+        for ans in data['results'][i]['incorrect_answers']:
+            incorrect_answers.append(html.unescape(ans))
 
         all_choices = incorrect_answers + [correct_answer]
         random.shuffle(all_choices)
