@@ -115,11 +115,10 @@ def show_game_over(player, questions):
 
 
 def main(): 
-    questions = fetch_trivia_questions()
-    print(questions)
     player = createPlayer()
-    for i in range(len(questions)):
-        ask_question(player, questions[i])    
+    questions = fetch_trivia_questions()
+    for question in questions:
+        ask_question(player, question)
     show_game_over(player, questions)
 
 # call the mains
