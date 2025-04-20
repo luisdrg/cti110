@@ -3,6 +3,11 @@
 # P5HW1
 # Trivia game
 
+'''
+urllib.request: https://docs.python.org/3/howto/urllib2.html
+html.unescape: https://stackoverflow.com/questions/2360598/how-do-i-unescape-html-entities-in-a-string-in-python-3-1
+json: https://www.w3schools.com/python/python_json.asp
+'''
 import urllib.request # to rquest data from url
 import json # to turn response into a Python dict
 import html  # to clean up string
@@ -10,7 +15,7 @@ import random # to shuffle
 import os # To clear screen
 
 def fetch_trivia_questions():
-    # Getting data from API
+    # Getting data from API 
     url = "https://opentdb.com/api.php?amount=10&category=21"
     response = urllib.request.urlopen(url)
     data = json.load(response)
