@@ -1,6 +1,6 @@
 # Luis Rivera Gonzalez
 # 3/20/2025
-# P4LAB1
+# P4LAB2
 # Displays information to users using loops.
 
 # Variable to control while loop
