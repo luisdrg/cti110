@@ -23,7 +23,7 @@ Rivera Gonzalez
 - [P4LAB1](https://github.com/luisdrg/cti110/blob/main/P4Lab1_RiveraGonzalez.py)
 - [P4LAB2](https://github.com/luisdrg/cti110/blob/main/P4LAB2_RiveraGonzalez.py)
 - [P4HW1](https://github.com/luisdrg/cti110/blob/main/P4HW1_RiveraGonzalez.py)
-- P4HW2  
+- [P4HW2](https://github.com/luisdrg/cti110/blob/main/P4HW2_RiveraGonzalezLuis.py)
 
 ## Python 5
 - P5LAB  
