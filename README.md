@@ -6,7 +6,7 @@ Rivera Gonzalez
 ## Python 1
 - [P1LAB1](https://github.com/luisdrg/cti110/blob/main/P1LAB1_RiveraGonzalezLuis.py)
 - [P1HW1](https://github.com/luisdrg/cti110/blob/main/P1HW1_RiveraGonzalezLuis.py)
-- P1HW2  
+- [P1HW2](https://github.com/luisdrg/cti110/blob/main/P2HW2_RiveraGonzalezLuis.py)
 
 ## Python 2
 - P2LAB1  
