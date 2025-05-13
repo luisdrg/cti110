@@ -27,4 +27,4 @@ Rivera Gonzalez
 
 ## Python 5
 - [P5LAB](https://github.com/luisdrg/cti110/blob/main/P5LAB_RiveraGonzalezLuis.py)
-- P5HW
+- [P5HW](https://github.com/luisdrg/cti110/blob/main/P5HW_RiveraGonzalezLuis.py)
