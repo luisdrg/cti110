@@ -31,4 +31,4 @@ Rivera Gonzalez
 
 ## Final Project
 - [Download zipped folder](https://github.com/luisdrg/cti110/raw/refs/heads/main/final_project.zip)
-- [Live Demo]([https://github.com/luisdrg/cti110/raw/refs/heads/main/final_project.zip](https://luisdrg.github.io/))
+- [Live Demo](https://luisdrg.github.io/)
