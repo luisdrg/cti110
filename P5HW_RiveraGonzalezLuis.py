@@ -52,7 +52,7 @@ def createPlayer():
     return player
    
 def ask_question(player, question):
-    os.system('clear')
+    os.system('cls')
     print(f"Player: {player['name']} \t\tScore: {player['score']} out of {question['number']}")
     print(f"============================================ Question {question['number']} ============================================")
     print(f"{question['text']}")
@@ -92,7 +92,7 @@ def ask_question(player, question):
     input("\nPress Enter to continue...")
 
 def show_game_over(player, questions):
-    os.system('clear')
+    os.system('cls')
     print("🎉 GAME OVER 🎉")
     print(f"Thanks for playing, {player['name']}!")
     print("=====================================================")
