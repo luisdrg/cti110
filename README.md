@@ -16,7 +16,7 @@ Rivera Gonzalez
 
 ## Python 3
 - [P3LAB](https://github.com/luisdrg/cti110/blob/main/P3LAB_RiveraGonzalez.py)
-- P3HW1  
+- [P3HW1](https://github.com/luisdrg/cti110/blob/main/P3HW1_RiveraGonzalezLuis.py)
 - P3HW2  
 
 ## Python 4
