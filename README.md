@@ -4,7 +4,7 @@ Rivera Gonzalez
 2/6/2025
 
 ## Python 1
-- P1LAB1  
+- [P1LAB1](https://github.com/luisdrg/cti110/blob/main/P1LAB1_RiveraGonzalezLuis.py)
 - P1HW1  
 - P1HW2  
 
